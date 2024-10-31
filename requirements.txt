@@ -1,11 +1,16 @@
-torch  
-torchvision  
-mmcv
-mmengine
-mmdetection
 streamlit
-opencv-python-headless
-numpy
-Pillow
-scipy
+torch==2.0.0+cu118          # Adjust CUDA version as per your system or set torch version for CPU
+torchvision==0.15.1+cu118   # Adjust according to the torch version
+mmdet==3.1.0                # Adjust to the version you're using
+mmcv==2.1.0                 # The version you're currently using
+mmengine                    # Dependency for MMDetection
 
+# Additional dependencies
+matplotlib                  # Optional, for visualizations
+opencv-python-headless      # For image processing without GUI
+pycocotools                 # For COCO dataset support (MMDetection dependency)
+
+# Streamlit and other general requirements
+Pillow
+numpy
+scipy
