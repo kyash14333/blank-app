@@ -1,8 +1,8 @@
 streamlit
-torch==2.0.0+cu118          # Adjust CUDA version as per your system or set torch version for CPU
-torchvision==0.15.1+cu118   # Adjust according to the torch version
-mmdet==3.1.0                # Adjust to the version you're using
-mmcv==2.1.0                 # The version you're currently using
+torch         # Adjust CUDA version as per your system or set torch version for CPU
+torchvision   # Adjust according to the torch version
+mmdet             # Adjust to the version you're using
+mmcv                # The version you're currently using
 mmengine                    # Dependency for MMDetection
 
 # Additional dependencies
