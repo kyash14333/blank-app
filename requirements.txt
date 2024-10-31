@@ -1,19 +1,20 @@
-# MMDetection and MMCV requirements
-mmdetection==3.1.0  # Replace with your MMDetection version
-mmcv-full==2.1.0  # Ensure this matches the version compatible with mmdetection
+# Clone and install MMDetection in editable mode
+-e git+https://github.com/open-mmlab/mmdetection.git@v3.1.0#egg=mmdetection
 
-# OpenCV headless version for image processing in server environments
+# Install compatible mmcv version
+mmcv-full
+
+# OpenCV headless version for server environments
 opencv-python-headless
 
-# PyTorch and TorchVision (adjust versions based on compatibility)
-torch==2.0.1+cpu  # or change to cuda if using GPU
-torchvision==0.15.2+cpu  # same here, adjust for GPU if needed
+# PyTorch and TorchVision (CPU version)
+torch  # Adjust version as needed
+torchvision  # Adjust version as needed
 
-# Streamlit requirements
+# Streamlit for web app interface
 streamlit
 
-# Additional dependencies for image handling, numpy operations, etc.
+# Additional dependencies
 numpy
 Pillow
 scipy
-
