@@ -1,22 +1,19 @@
-torch 
-mmengine
-torchvision
-mmcv
-cython
-numpy
-cityscapesscripts
-emoji
-fairscale
-imagecorruptions
-scikit-learn
-matplotlib
-numpy
-pycocotools
-scipy
-shapely
-six
-terminaltables
-tqdm
-urllib3<2.0.0
+# MMDetection and MMCV requirements
+mmdetection==3.1.0  # Replace with your MMDetection version
+mmcv-full==2.1.0  # Ensure this matches the version compatible with mmdetection
+
+# OpenCV headless version for image processing in server environments
 opencv-python-headless
+
+# PyTorch and TorchVision (adjust versions based on compatibility)
+torch==2.0.1+cpu  # or change to cuda if using GPU
+torchvision==0.15.2+cpu  # same here, adjust for GPU if needed
+
+# Streamlit requirements
+streamlit
+
+# Additional dependencies for image handling, numpy operations, etc.
+numpy
+Pillow
+scipy
 
