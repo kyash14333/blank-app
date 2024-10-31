@@ -1,20 +1,10 @@
-# Clone and install MMDetection in editable mode
+torch  
+torchvision  
+mmcv
+mmengine
 -e git+https://github.com/open-mmlab/mmdetection.git@v3.1.0#egg=mmdetection
-
-# Install compatible mmcv version
-mmcv-full
-
-# OpenCV headless version for server environments
-opencv-python-headless
-
-# PyTorch and TorchVision (CPU version)
-torch  # Adjust version as needed
-torchvision  # Adjust version as needed
-
-# Streamlit for web app interface
 streamlit
-
-# Additional dependencies
+opencv-python-headless
 numpy
 Pillow
 scipy
