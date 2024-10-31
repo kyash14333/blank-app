@@ -2,9 +2,10 @@ torch
 torchvision  
 mmcv
 mmengine
+mmdetection
 streamlit
 opencv-python-headless
 numpy
 Pillow
 scipy
--e git+https://github.com/open-mmlab/mmdetection.git@v3.1.0#egg=mmdetection
+
