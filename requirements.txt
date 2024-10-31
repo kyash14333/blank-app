@@ -1,16 +1,21 @@
 streamlit
-torch         # Adjust CUDA version as per your system or set torch version for CPU
-torchvision   # Adjust according to the torch version
-mmdet             # Adjust to the version you're using
-mmcv                # The version you're currently using
-mmengine                    # Dependency for MMDetection
+torch       # Adjust CUDA version as per your system or set for CPU
+torchvision  # Compatible with torch version
+git+https://github.com/open-mmlab/mmdetection.git@main#egg=mmdet   # Cloning the latest version of MMDetection
+mmengine                    # Needed by MMDetection
+
+# Install the requirements for MMDetection
+# Build requirements
+git+https://github.com/open-mmlab/mmdetection.git@main#egg=mmdet&subdirectory=requirements/build.txt
+# Runtime requirements
+git+https://github.com/open-mmlab/mmdetection.git@main#egg=mmdet&subdirectory=requirements/runtime.txt
 
 # Additional dependencies
-matplotlib                  # Optional, for visualizations
+matplotlib                  # Optional for visualizations
 opencv-python-headless      # For image processing without GUI
-pycocotools                 # For COCO dataset support (MMDetection dependency)
+pycocotools                 # For COCO dataset support
 
-# Streamlit and other general requirements
+# Streamlit and general dependencies
 Pillow
 numpy
 scipy
