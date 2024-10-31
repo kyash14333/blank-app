@@ -1,6 +1,9 @@
 streamlit
+torch
+torchvision
+opencv-python-headless  # Use opencv-python-headless instead of opencv-python to avoid GUI dependencies
 mmcv-full
 mmdet
+requests
+pillow
 numpy
-opencv-python
-Pillow
