@@ -2,13 +2,34 @@ import streamlit as st
 import mmcv
 import cv2
 import torch
+import requests
+import os
 from mmdet.apis import init_detector, inference_detector
 import numpy as np
 from PIL import Image
 
-# Model configuration and checkpoint
-CONFIG_PATH = '/home/jovyan/CRANE/model/crane_1class_fasterrcnn_10/22/24/config.py'
-CHECKPOINT_PATH ='/home/jovyan/CRANE/model/crane_1class_fasterrcnn_10/22/24/epoch_300.pth'
+# Public links for config and checkpoint files
+CONFIG_URL = 'https://drive.google.com/uc?export=download&id=1lycZRuD3tL3ru-ogpF87eprrJ1lFJDBT'
+CHECKPOINT_URL = 'https://drive.google.com/uc?export=download&id=1ExBbsz9OK5GFVvsLG6Nkme5bN1qTNufN'
+
+
+
+# Local paths to save downloaded files
+CONFIG_PATH = 'config.py'
+CHECKPOINT_PATH = 'epoch_500.pth'
+
+# Function to download the config and checkpoint files
+def download_file(url, dest_path):
+    if not os.path.exists(dest_path):
+        st.write(f"Downloading {dest_path}...")
+        response = requests.get(url)
+        with open(dest_path, 'wb') as f:
+            f.write(response.content)
+        st.write(f"Downloaded {dest_path}")
+
+# Download files if they are not already present
+download_file(CONFIG_URL, CONFIG_PATH)
+download_file(CHECKPOINT_URL, CHECKPOINT_PATH)
 
 # Initialize the model
 @st.cache_resource
