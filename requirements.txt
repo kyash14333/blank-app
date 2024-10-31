@@ -1,1 +1,6 @@
 streamlit
+mmcv-full
+mmdet
+numpy
+opencv-python
+Pillow
